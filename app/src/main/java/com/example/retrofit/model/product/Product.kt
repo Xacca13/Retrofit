@@ -1,6 +1,6 @@
 package com.example.retrofit.model.product
 
-data class Product(
+data class Product (
     val id: Int,
     val title: String,
     val description: String,

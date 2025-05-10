@@ -1,6 +1,6 @@
 package com.example.retrofit.model.user
 
-data class User(
+data class User (
     val id: Int,
     val username: String,
     val email: String,

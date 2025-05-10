@@ -1,6 +1,6 @@
 package com.example.retrofit.model.product
 
-data class Meta(
+data class Meta (
     val createdAt: String,
     val updatedAt: String,
     val barcode: String,

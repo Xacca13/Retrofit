@@ -33,7 +33,23 @@ class ProductController : IProduct {
         return controller.getProductById(id)
     }
 
+    override suspend fun getAllProductsByName(q: String): Products {
+        return controller.getAllProductsByName(q)
+    }
+
     override suspend fun getAllProduct(): Products {
         return controller.getAllProduct()
+    }
+
+    override suspend fun getFromUserProductById(token: String, id: Int): Product {
+        return controller.getFromUserProductById(token, id)
+    }
+
+    override suspend fun getFromUserAllProductsByName(token: String, q: String): Products {
+        return controller.getFromUserAllProductsByName(token, q)
+    }
+
+    override suspend fun getFromUserAllProduct(token: String): Products {
+        return controller.getFromUserAllProduct(token)
     }
 }
