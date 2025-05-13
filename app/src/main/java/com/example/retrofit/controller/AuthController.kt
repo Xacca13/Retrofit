@@ -2,11 +2,12 @@ package com.example.retrofit.controller
 
 import com.example.retrofit.dao.IAuth
 import com.example.retrofit.model.request.AuthBody
-import com.example.retrofit.model.user.User
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.example.retrofit.model.user.User
+import retrofit2.Response
 
 private val url: String = "https://dummyjson.com/"
 
@@ -30,7 +31,7 @@ class AuthController: IAuth {
         controller = retrofit.create(IAuth::class.java)
     }
 
-    override suspend fun getUserInfo(body: AuthBody): User {
+    override suspend fun getUserInfo(body: AuthBody): Response<User> {
         return controller.getUserInfo(body)
     }
 }
